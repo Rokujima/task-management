@@ -56,3 +56,15 @@ POST /api/tasks: Create a new task.
 GET /api/tasks/{id}: Retrieve a task by its ID.
 PATCH /api/tasks/{id}: Update a task by its ID.
 DELETE /api/tasks/{id}: Delete a task by its ID.
+
+### Testing
+To run the scenario tests for this API, follow these steps:
+
+1. Ensure that the MongoDB server is running, or you have configured the connection in config/db.js.
+
+2. Open a terminal and navigate to the project directory.
+
+3. Run the tests using the following command:
+   npm test
+   
+The tests will automatically start and provide feedback on the success or failure of the API endpoints.
