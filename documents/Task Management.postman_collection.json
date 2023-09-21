@@ -1,0 +1,453 @@
+{
+	"info": {
+		"_postman_id": "42f31759-17f0-4439-9a13-cfcea5c64325",
+		"name": "Task Management",
+		"description": "API Task Management developing use NodeJs ExpressJs MongoDB",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1805243"
+	},
+	"item": [
+		{
+			"name": "Get All Task",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/api/tasks",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"api",
+						"tasks"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success Get All Data",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{root}}/api/tasks",
+							"host": [
+								"{{root}}"
+							],
+							"path": [
+								"api",
+								"tasks"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "196"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"c4-Vm40/YU3ukZnsmwoWL76wLHjaco\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 21 Sep 2023 04:40:36 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"650bc8d1838ffca495df1d49\",\n        \"title\": \"First Task\",\n        \"description\": \"This my first task\",\n        \"completed\": false,\n        \"createdAt\": \"2023-09-21T04:38:41.161Z\",\n        \"updatedAt\": \"2023-09-21T04:38:41.161Z\",\n        \"__v\": 0\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Get One Task",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/api/tasks/:id",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"api",
+						"tasks",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success Get One Data",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{root}}/api/tasks/650bc8d1838ffca495df1d49",
+							"host": [
+								"{{root}}"
+							],
+							"path": [
+								"api",
+								"tasks",
+								"650bc8d1838ffca495df1d49"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "193"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"c1-rzbD0Krtc/s5TmUssXQkPCbiHXc\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 21 Sep 2023 04:42:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"650bc8d1838ffca495df1d49\",\n    \"title\": \"First Task\",\n    \"description\": \"This my first task\",\n    \"completed\": true,\n    \"createdAt\": \"2023-09-21T04:38:41.161Z\",\n    \"updatedAt\": \"2023-09-21T04:41:04.542Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Create Task",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"First Task\",\r\n    \"description\": \"This my first task\",\r\n    \"completed\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{root}}/api/tasks",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"api",
+						"tasks"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success Create Data",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"First Task\",\r\n    \"description\": \"This my first task\",\r\n    \"completed\": false\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{root}}/api/tasks",
+							"host": [
+								"{{root}}"
+							],
+							"path": [
+								"api",
+								"tasks"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "194"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"c2-F6CgzRMRqnKErG3p47qdmnSFk8M\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 21 Sep 2023 04:38:41 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"title\": \"First Task\",\n    \"description\": \"This my first task\",\n    \"completed\": false,\n    \"_id\": \"650bc8d1838ffca495df1d49\",\n    \"createdAt\": \"2023-09-21T04:38:41.161Z\",\n    \"updatedAt\": \"2023-09-21T04:38:41.161Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Update Task",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"First Task\",\r\n    \"description\": \"This my first task\",\r\n    \"completed\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{root}}/api/tasks/:id",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"api",
+						"tasks",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success Update Data",
+					"originalRequest": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"First Task\",\r\n    \"description\": \"This my first task\",\r\n    \"completed\": true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{root}}/api/tasks/650bc8d1838ffca495df1d49",
+							"host": [
+								"{{root}}"
+							],
+							"path": [
+								"api",
+								"tasks",
+								"650bc8d1838ffca495df1d49"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "193"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"c1-rzbD0Krtc/s5TmUssXQkPCbiHXc\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 21 Sep 2023 04:41:04 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"650bc8d1838ffca495df1d49\",\n    \"title\": \"First Task\",\n    \"description\": \"This my first task\",\n    \"completed\": true,\n    \"createdAt\": \"2023-09-21T04:38:41.161Z\",\n    \"updatedAt\": \"2023-09-21T04:41:04.542Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Task",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{root}}/api/tasks/:id",
+					"host": [
+						"{{root}}"
+					],
+					"path": [
+						"api",
+						"tasks",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Success Delete Data",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{root}}/api/tasks/650bc8d1838ffca495df1d49",
+							"host": [
+								"{{root}}"
+							],
+							"path": [
+								"api",
+								"tasks",
+								"650bc8d1838ffca495df1d49"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "26"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1a-EXuvryuVXWlMt0iHutTdXWDMZ38\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 21 Sep 2023 04:46:43 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Task deleted\"\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "root",
+			"value": "http://localhost:3000",
+			"type": "string"
+		}
+	]
+}
